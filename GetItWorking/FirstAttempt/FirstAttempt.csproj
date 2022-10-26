@@ -15,6 +15,7 @@
   
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" Version="6.0.541" />
+    <PackageReference Include="MudBlazor" Version="6.0.17" />
   </ItemGroup>
 
 </Project>
