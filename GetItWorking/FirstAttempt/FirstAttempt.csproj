@@ -9,7 +9,7 @@
 
 	
 	<PropertyGroup>
-    <RootNameSpace>FirstAttempt</RootNameSpace>
+    <RootNameSpace>$safeprojectname$</RootNameSpace>
   </PropertyGroup>
 	         
   
