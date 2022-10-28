@@ -11,8 +11,9 @@ public partial class MainWindow : Window
         InitializeComponent();
 
         var serviceCollection = new ServiceCollection();
-        serviceCollection.AddWpfBlazorWebView();
-        serviceCollection.AddMudServices();
+
+        serviceCollection.AddFirstAttempt();
+
         Resources.Add("services", serviceCollection.BuildServiceProvider());
     }
 }

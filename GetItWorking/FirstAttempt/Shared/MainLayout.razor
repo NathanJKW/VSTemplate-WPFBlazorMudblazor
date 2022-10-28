@@ -1,20 +1,8 @@
 ﻿@inherits LayoutComponentBase
 
-<MudThemeProvider/>
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
 <MudDialogProvider/>
 <MudSnackbarProvider/>
-
-@*<MudLayout>
-    <MudDrawer Open=true Elevation="0" Variant="@DrawerVariant.Persistent" Color="Color.Dark">
-        <MudDrawerHeader>
-            <MudText Typo="Typo.h6">My App</MudText>
-        </MudDrawerHeader>
-        <NavMenu />
-    </MudDrawer>
-    <MudMainContent>
-        @Bodyn
-    </MudMainContent>
-</MudLayout>*@
 
 <MudLayout>
     <MudAppBar Elevation="1" Dense=true>
@@ -22,6 +10,7 @@
         <MudText Typo="Typo.h5" Class="ml-3">Template App</MudText>
         <MudSpacer />
         <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" />
+        <MudSwitch @bind-Checked="@_isDarkMode" Color="Color.Primary" Class="ma-4" T="bool" Label="Toggle Light/Dark Mode"/>
     </MudAppBar>
     <MudDrawer Open=true Variant="@DrawerVariant.Persistent" ClipMode="DrawerClipMode.Always" Elevation="2">
         <NavMenu />
@@ -32,5 +21,6 @@
 </MudLayout>
 
 @code {
-
+    private MudTheme _theme = new();
+    private bool _isDarkMode = true;
 }
